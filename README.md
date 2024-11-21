@@ -27,7 +27,7 @@ The script successfully inserted and processed 100,000 UUIDv4s. The results show
 These results make sense because UUIDv4s are highly random, and it’s rare for two UUIDs to share the same character frequency pattern. 
 
 Here’s an example output:
-
+```
 ✅ Connected to MongoDB
 🌟 Step 1: Inserting 100,000 UUIDv4s...
 ✅ UUIDs successfully inserted!
@@ -142,3 +142,4 @@ UUIDs Sharing This Pattern: 1
 }
 UUIDs Sharing This Pattern: 1
 ========================================================
+```
