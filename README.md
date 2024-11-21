@@ -14,19 +14,10 @@
 ## Implementation
 - I used a batch approach to insert the UUIDs in chunks of 1,000 for better performance.
 - The character frequency calculation used MongoDB’s `$function` to execute JavaScript directly within the database.
-
-## Problems and Solutions
 - Initially, MongoDB threw errors about `_id` types. I resolved this by defining `_id` as `string` in the TypeScript schema.
 
 ## Results
-The script successfully inserted and processed 100,000 UUIDv4s. The results showed:
-- **Total UUIDs Processed**: 100,000
-- **Unique Character Count Patterns**: 100,000
-- **Average UUIDs Sharing the Same Pattern**: 1.00
-
-These results make sense because UUIDv4s are highly random, and it’s rare for two UUIDs to share the same character frequency pattern. 
-
-Here’s an example output:
+Here’s the example output:
 ```
 ✅ Connected to MongoDB
 🌟 Step 1: Inserting 100,000 UUIDv4s...
@@ -143,3 +134,5 @@ UUIDs Sharing This Pattern: 1
 UUIDs Sharing This Pattern: 1
 ========================================================
 ```
+
+These results make sense because UUIDv4s are highly random, and it’s rare for two UUIDs to share the same character frequency pattern. 
