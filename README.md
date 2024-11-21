@@ -136,6 +136,24 @@ UUIDs Sharing This Pattern: 1
 
 These results make sense because UUIDv4s are highly random, and it’s rare for two UUIDs to share the same character frequency pattern. 
 
+To verify the algorithm, I wrote a simple script to test it. I used the following sample UUIDs:
+1. `550e8400-e29b-41d4-a716-446655440000`
+2. `550e4800-e29b-41d4-a716-446655440000`
+3. `123e4567-e89b-12d3-a456-426614174000`
+4. `123e4567-e89b-12d3-a456-426614174001`
+5. `00000000-0000-0000-0000-000000000000`
+
+The algorithm produced the following output:
+
+```
+======================== RESULTS ========================
+Total UUIDs Processed: 5
+Unique Character Count Patterns: 4
+Average UUIDs Sharing Same Pattern: 1.25
+========================================================
+```
+This confirms that the algorithm works correctly.
+
 # Task 2: Product Data Scraper
 
 ## Problem
